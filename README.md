@@ -2,7 +2,7 @@
 Quick Start Guide to using Linear Regression Models in Python  
 ## Introduction  
 A linear regression model might be the simplest of all models to understand. It tries to explain a relationship between  
-independant variables and a dependent variable. We will do this by using the least squared method. This is a statistical   procedure to find the best fit for a set of data points by minimizing the sum of the offsets or residuals of points from the   plotted curve. Least squares regression is used to predict the behavior of dependent variables.  
+independent variables and a dependent variable. We will do this by using the least squared method. This is a statistical   procedure to find the best fit for a set of data points by minimizing the sum of the offsets or residuals of points from the   plotted curve. Least squares regression is used to predict the behavior of dependent variables.  
  
 ## Prerequisites
 1. Python 3.7 or newer  
@@ -60,10 +60,10 @@ number generator. This makes it so we are able to replicate results.
 ```
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=101) 
 ```
-The model can now be instantiated. Call the linear regression model and assign it to lm. Next the model needs to be fitted  
+The model can now be instantiated. Call the linear regression model and assign it to ```lm```. Next the model needs to be fitted  
 or trained as shown below. We can also check the coefficient of each feature below to see which features play the biggest  
-role in price change of houses. This data is synthetically generated so it might not look accurate, but it is a worth while  
-exercise. Next the perdictions need to be generated using the .predict() method.  
+role in price change of houses. This data is synthetically generated so it might not look realistic, but it is a worth while  
+exercise. Next the perdictions need to be generated using the ```.predict()``` method.  
 ```
 m = LinearRegression() #creating an instanciation of the linear regression model
 lm.fit(X_train,y_train) #this is attempting to teach the algo based on the training data set that we pulled
@@ -74,7 +74,7 @@ print(cdf)
 predictions = lm.predict(X_test) #setting the prediction variable equal to the x test
 
 ```
-For a visual of the correlation between the features and result, a scatter plat can be made. The linear pattern
+For a visual of the correlation between the features and result, a scatter plot can be made. The linear pattern
 of the data points is a good sign and means that the features do have correlation to the result.  
 
 Lastly, it is time to analyize the accuracy of the model. This will be done using Mean Absolute Error, Mean Squared Error,  
